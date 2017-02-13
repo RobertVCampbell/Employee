@@ -94,10 +94,186 @@ public class Employee {
 	 
 	 //set the date for each day in the schedule
 	 /*Another work in progress.
-	  * Right now the function will expect 2 arguemnts to conc.*/
+	  * Right now the function will expect 2 arguemnts to conc.
+	  * Currently does not account for leap years*/
 	 public void setDate(int m, int d){
 		 schedule[0][0] = m + "/" + d;
+		 d += 1;
 		 
-	 }
+		 //Test for the month
+		 switch(m){
+		 //January
+			 case 1:
+				 for(int i = 1; i < 6; i++){
+					 if(d > 31){
+						 m += 1;
+						 d = 1;
+						 schedule[0][i] = m + "/" + d;
+						 d += 1;}//End if
+					 else{
+						 schedule[0][i] = m + "/" + d;
+						 d += 1;}//end else
+				 }//end for
+				 break;//end case 1
+	
+			 //February
+			 case 2:
+				 for(int i = 1; i < 6; i++){
+					 if(d > 28){
+						 m += 1;
+						 d = 1;
+						 schedule[0][i] = m + "/" + d;
+						 d += 1;}//End if
+					 else{
+						 schedule[0][i] = m + "/" + d;
+						 d += 1;}//end else
+				 }//end for
+				 break;//end case 2
+				 
+			 //March
+			 case 3:
+				 for(int i = 1; i < 6; i++){
+					 if(d > 31){
+						 m += 1;
+						 d = 1;
+						 schedule[0][i] = m + "/" + d;
+						 d += 1;}//End if
+					 else{
+						 schedule[0][i] = m + "/" + d;
+						 d += 1;}//end else
+				 }//end for
+				 break;//end case 3
+				 
+			 //April
+			 case 4:
+				 for(int i = 1; i < 6; i++){
+					 if(d > 30){
+						 m += 1;
+						 d = 1;
+						 schedule[0][i] = m + "/" + d;
+						 d += 1;}//End if
+					 else{
+						 schedule[0][i] = m + "/" + d;
+						 d += 1;}//end else
+				 }//end for
+				 break;//end case 4
+				 
+			//May
+			 case 5:
+				 for(int i = 1; i < 6; i++){
+					 if(d > 31){
+						 m += 1;
+						 d = 1;
+						 schedule[0][i] = m + "/" + d;
+						 d += 1;}//End if
+					 else{
+						 schedule[0][i] = m + "/" + d;
+						 d += 1;}//end else
+				 }//end for
+				 break;//end case 5
+				 
+			 //June
+			 case 6:
+				 for(int i = 1; i < 6; i++){
+					 if(d > 30){
+						 m += 1;
+						 d = 1;
+						 schedule[0][i] = m + "/" + d;
+						 d += 1;}//End if
+					 else{
+						 schedule[0][i] = m + "/" + d;
+						 d += 1;}//end else
+				 }//end for
+				 break;//end case 6
+				 
+			 //July
+			 case 7:
+				 for(int i = 1; i < 6; i++){
+					 if(d > 31){
+						 m += 1;
+						 d = 1;
+						 schedule[0][i] = m + "/" + d;
+						 d += 1;}//End if
+					 else{
+						 schedule[0][i] = m + "/" + d;
+						 d += 1;}//end else
+				 }//end for
+				 break;//end case 7
+				 
+			 //August
+			 case 8:
+				 for(int i = 1; i < 6; i++){
+					 if(d > 31){
+						 m += 1;
+						 d = 1;
+						 schedule[0][i] = m + "/" + d;
+						 d += 1;}//End if
+					 else{
+						 schedule[0][i] = m + "/" + d;
+						 d += 1;}//end else
+				 }//end for
+				 break;//end case 8
+				 
+			 //September
+			 case 9:
+				 for(int i = 1; i < 6; i++){
+					 if(d > 30){
+						 m += 1;
+						 d = 1;
+						 schedule[0][i] = m + "/" + d;
+						 d += 1;}//End if
+					 else{
+						 schedule[0][i] = m + "/" + d;
+						 d += 1;}//end else
+				 }//end for
+				 break;//end case 9
+				 
+			 //October
+			 case 10:
+				 for(int i = 1; i < 6; i++){
+					 if(d > 31){
+						 m += 1;
+						 d = 1;
+						 schedule[0][i] = m + "/" + d;
+						 d += 1;}//End if
+					 else{
+						 schedule[0][i] = m + "/" + d;
+						 d += 1;}//end else
+				 }//end for
+				 break;//end case 10
+				 
+			 //November
+			 case 11:
+				 for(int i = 1; i < 6; i++){
+					 if(d > 30){
+						 m += 1;
+						 d = 1;
+						 schedule[0][i] = m + "/" + d;
+						 d += 1;}//End if
+					 else{
+						 schedule[0][i] = m + "/" + d;
+						 d += 1;}//end else
+				 }//end for
+				 break;//end case 11
+				 
+			 //December
+			 case 12:
+				 for(int i = 1; i < 6; i++){
+					 if(d > 31){
+						 m = 1;
+						 d = 1;
+						 schedule[0][i] = m + "/" + d;
+						 d += 1;}//End if
+					 else{
+						 schedule[0][i] = m + "/" + d;
+						 d += 1;}//end else
+				 }//end for
+				 break;//end case 12
+				
+			 default:
+				 System.out.println("Invalid date");
+					break; 
+				 }//End switch 
+	 }//End of setDate
 	
 }//End of Class
