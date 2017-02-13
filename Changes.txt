@@ -1,0 +1,11 @@
+02/13 - Campbell
+     Added class variables, strings, and arrays
+        schedule, first, last, position, payRate, weekPay, totalDHours,
+        totalWHours, priority
+     Added constructor
+     Added get functions
+        name, first, last, position, rate, pay, day, week, priority
+      Added set functions
+        priority, first, last, date
+        
+|---------------------------------------------------------------------------------------------|
