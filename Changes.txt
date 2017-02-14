@@ -1,11 +1,15 @@
 02/13 - Campbell
-     Added class variables, strings, and arrays
+     Added class variables, strings, and arrays:
         schedule, first, last, position, payRate, weekPay, totalDHours,
         totalWHours, priority
      Added constructor
-     Added get functions
+     Added get functions:
         name, first, last, position, rate, pay, day, week, priority
-      Added set functions
+      Added set functions:
         priority, first, last, date
         
 |---------------------------------------------------------------------------------------------|
+
+02/13 - Campbell
+     Came back to it today, added a few more set functions:
+          start, end, duration, week
