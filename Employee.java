@@ -274,6 +274,61 @@ public class Employee {
 				 System.out.println("Invalid date");
 					break; 
 				 }//End switch 
-	 }//End of setDate
+		 return;}//End of setDate
 	
+	 //Set start time
+	 public void setStart(String start, int day){
+		 schedule[1][day] = start;
+		 setDuration(day);
+		 return;}//end of setStart
+	 
+	 //Set end time
+	 public void setEnd(String end, int day){
+		 schedule[2][day] = end;
+		 setDuration(day);
+		 return;}//End of setEnd
+	 
+	 //Set duration
+	 public void setDuration(int index){		 
+		 int startH, startM, endH, endM;
+		 
+		 //Split
+		 String[] startArr = schedule[1][index].split(":");
+		 String[] endArr = schedule[2][index].split(":");
+		 
+		 startH = Integer.parseInt(startArr[0]);
+		 startM = Integer.parseInt(startArr[1]);
+		 endH = Integer.parseInt(endArr[0]);
+		 endM = Integer.parseInt(endArr[1]);
+		 
+		 
+		 //Shifts are not expected to be over 12 hours.
+		 //This converts the end time by 12 hours if it's initial value is less than the start time
+		 //Ex. start at 10am, end at 1am, then 1am become 13
+		 if(endH < startH){
+			 endH += 12;}//end if
+		 
+		 //Convert minutes into partial hours and then combine w/ the relevant hour
+		 startM = startM/60;
+		 startH += startM;
+		 
+		 endM = endM/60;
+		 endH += endM;
+		 
+		 //total hours for the day are end time - start time
+		 totalDHours[index] = endH - startH;
+		 
+		 //Runs the function that sets the weekly total
+		 setWeek();
+		 
+		 return;}//End of setDuration
+	 
+	 public void setWeek(){
+		 totalWHours = 0;
+		 for(int count = 0; count < 7; count++){
+			 totalWHours += totalDHours[count];}//End for
+	 	return;}//End setWeek
+	 
+	 
 }//End of Class
+
