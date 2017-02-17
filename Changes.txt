@@ -13,3 +13,18 @@
 02/13 - Campbell
      Came back to it today, added a few more set functions:
           start, end, duration, week
+
+|---------------------------------------------------------------------------------------------|
+
+02/16 - Campbell
+     Added set functions for:
+          setting the hourly pay rate, setting the weekly earnings
+     Added get functions for:
+          start time, end time, and full array
+     
+     Created EmployeeArr.java
+         declared starting array and variables.
+         
+|---------------------------------------------------------------------------------------------|
+
+          
