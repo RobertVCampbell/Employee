@@ -1,6 +1,6 @@
 /*Created by:	Robert Campbell
  *Created on: 	02/13/17
- *Purpose:		-Create employee objects with relevent scheduling and
+ *Purpose:		-Create employee objects with relevant scheduling and
  *					payroll information, on a week to week basis.*/
 public class Employee {
 	
@@ -74,6 +74,22 @@ public class Employee {
 	 //Return the priority boolean
 	 public boolean getPriority(){
 		 return priority;}//end getPriority
+	
+	 //Return the start time for a given day
+	 public String getStart(int day){
+		 return schedule[1][day];
+	 }//end of getStart
+	 
+	 //Return the end time for a given day
+	 public String getEnd(int day){
+		 return schedule[2][day];}//end getEnd
+	 
+	 //Return the entire schedule array
+	 public String[][] getSchedule(){
+		 return schedule;
+	 }//end of get schedule
+
+
 	 
  //Set Functions
 	 //Set priority
@@ -323,12 +339,25 @@ public class Employee {
 		 
 		 return;}//End of setDuration
 	 
+	 //Set the total hours for the week
 	 public void setWeek(){
 		 totalWHours = 0;
 		 for(int count = 0; count < 7; count++){
 			 totalWHours += totalDHours[count];}//End for
+		 
+		 setPay();
 	 	return;}//End setWeek
 	 
+	 //Set the hourly payrate for the employee
+	 public void setRate(double pay){
+		 payRate = pay;
+		 setPay();}//end setPayRate()
+	 
+	 /*Calculate the total pay for the weeks work
+	 * set to private so it can only be called from either the setWeek or
+	 * the setPayRate functions*/
+	 private void setPay(){
+		 weekPay = totalWHours * payRate;
+	 }//End setWeekPay()
 	 
 }//End of Class
-
