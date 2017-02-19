@@ -27,4 +27,14 @@
          
 |---------------------------------------------------------------------------------------------|
 
+02/18 - Campbell
+     EmployeeArr.java
+          added constructor        
+          added insert
+          added deleteLast
+          added deleteFirst
+          added isEmpty
+          added isFull
+          added sortFAlpha
+
           
